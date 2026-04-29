@@ -12,19 +12,25 @@ import { Boxes, Info } from "lucide-react";
 
 const INITIAL_FIGURE: Figure = {
   id: "default",
-  name: "Super Toroid",
-  description: "A complex mathematical surface",
+  name: "Animated Hypersurface",
+  description: "A dynamic surface morphing through time 't' and params 'a, b, c'",
   formula: {
-    x: "(2 + cos(v)) * cos(u)",
-    y: "(2 + cos(v)) * sin(u)",
-    z: "sin(v) + 0.5 * sin(5 * u)",
+    x: "(2 + cos(v)) * cos(u) + sin(t) * a",
+    y: "(2 + cos(v)) * sin(u) + cos(t) * b",
+    z: "sin(v) + c * sin(5 * u + t)",
     uRange: [0, Math.PI * 2],
     vRange: [0, Math.PI * 2],
-    resolution: 150,
+    resolution: 80, // Lower initial resolution for smooth animation
   },
   color: "#00f3ff",
   opacity: 0.8,
   wireframe: true,
+  isAnimated: true,
+  params: {
+    a: 1,
+    b: 1,
+    c: 0.5,
+  },
 };
 
 export default function App() {

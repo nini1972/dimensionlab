@@ -15,4 +15,11 @@ export interface Figure {
   color: string;
   opacity: number;
   wireframe: boolean;
+  // New Multidimensional Properties
+  isAnimated: boolean;
+  params: {
+    a: number;
+    b: number;
+    c: number;
+  };
 }

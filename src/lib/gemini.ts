@@ -7,9 +7,9 @@ export async function suggestFormula(prompt: string) {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: `Generate a 3D parametric formula for: ${prompt}. 
-      The formula should be in terms of u and v.
-      Provide expressions for x(u, v), y(u, v), and z(u, v).
-      Also provide suggested ranges for u and v, and a name for the figure.`,
+      The formula should be in terms of u and v, and can optionally use t (time), a, b, or c (dynamic parameters).
+      Provide expressions for x(u, v, t, a, b, c), y(u, v, t, a, b, c), and z(u, v, t, a, b, c).
+      Provide suggested ranges for u and v, and a name for the figure. Describe how time 't' or parameters 'a, b, c' affect the shape in the description.`,
       config: {
         responseMimeType: "application/json",
         responseSchema: {
