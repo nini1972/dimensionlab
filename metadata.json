@@ -1,0 +1,6 @@
+{
+  "name": "DimensionLab",
+  "description": "Generate and visualize complex multidimensional figures using mathematical formulas and AI assistance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["3D Visualization", "Mathematical Modeling", "AI Formula Generation"]
+}
